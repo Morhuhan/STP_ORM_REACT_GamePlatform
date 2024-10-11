@@ -1,0 +1,344 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-image: url('https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/af6073d2-cbb2-4e28-b642-3327d14808b2.avif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+/* Зона со всеми гридами */
+
+.MainArea {
+  margin: 15px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+/* Шапка гридов */
+
+.GridHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(139,154,158,1) 0%, rgba(61,170,177,0.4598039899553571) 0%, rgba(56,61,62,1) 100%, rgba(153,169,170,1) 100%, rgba(0,212,255,1) 100%); 
+}
+
+
+.GridHeader h2 {
+  font-family: 'Pacifico', cursive;
+  color: azure;
+  padding: 5px;
+}
+
+
+.GridHeader input{
+  height: 20px;
+  width: 250px;
+}
+
+.gridName {
+  width: 250px;
+}
+
+/* Грид площадок */
+
+.PlatformGrid {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.grid-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; 
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.platform-grid-item.selected {
+  border: 4px solid #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.game-platform-grid-item.selected {
+  border: 4px solid #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.game-grid-item.selected {
+  border: 4px solid #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+
+.platform-grid-item {
+  width: 400px;
+  height: 180px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: default;
+}
+
+.platform-grid-item-buttons-container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+  background: linear-gradient(to bottom, #b0b0b0, #d1d1d1); 
+  border-bottom: 1px solid #0e0b0b;
+}
+
+.platform-grid-item-main-container {
+  display: flex;
+  padding: 10px;
+  height: 100%;
+  background: linear-gradient(to bottom, #d1d1d1, #f0f0f0); 
+}
+
+.platform-grid-item-main-container:hover {
+  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+  cursor: pointer;
+}
+
+.platform-grid-item-img-container img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+
+.platform-grid-item-name-char-container {
+  height: 100%;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.platform-grid-item-buttons-container button {
+  padding: 5px 10px;
+  background: none;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.platform-grid-item-buttons-container button:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+
+/* Грид платформ */
+
+.GamePlatformGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 5px;
+}
+
+.game-platform-grid-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; 
+  align-items: center;
+  justify-content: center;
+}
+
+.game-platform-grid-item {
+  width: 400px;
+  height: 180px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-platform-grid-item-content {
+  display: flex;
+  padding: 10px;
+  height: 100%;
+}
+
+.game-platform-grid-item-image {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+
+.game-platform-grid-item-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.game-platform-grid-item-actions {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+  background-color: bisque;
+}
+
+/* Грид игр */
+.GameGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 5px;
+}
+
+.game-grid-item {
+  width: 400px;
+  border: 1px solid black ;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-grid-item-main-container {
+  display: flex;
+  padding: 10px;
+  height: 100%;
+}
+
+.game-grid-item-img-container img{
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.game-grid-item-name-char-container{
+  height: 100%;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.game-grid-item-buttons-container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+  background-color: bisque;
+}
+
+
+/* Модальные окна */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  max-width: 90%;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 101; 
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-actions button:last-child {
+  background-color: #ccc;
+  margin-left: 10px;
+}
+
+.modal-actions button:hover {
+  opacity: 0.9;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* //////////////////////// */
+
